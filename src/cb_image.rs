@@ -1,3 +1,5 @@
+//! 合并图片模块
+
 use image::{
     imageops::FilterType::Triangle, io::Reader, DynamicImage, GenericImageView, ImageError,
     ImageFormat,
