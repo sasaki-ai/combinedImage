@@ -36,6 +36,7 @@ impl FloatingImage {
         }
     }
 
+    /// 将图片数据设置给data
     pub fn set_data(&mut self, data: Vec<u8>) -> Result<(), ImageDataErrors> {
         if data.len() > self.data.capacity() {
             return Err(ImageDataErrors::BufferTooSmall);

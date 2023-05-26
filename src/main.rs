@@ -24,9 +24,10 @@ fn main() -> Result<(), ImageDataErrors> {
 
     //合并图片
     let combined_data = combine_images(image_1, image_2);
-    //
+    //设置图片数据
     output.set_data(combined_data)?;
 
+    //将提供的缓冲区保存到以指定格式指定的路径中的文件
     if let Err(e) = image::save_buffer_with_format(
         output.name,
         &output.data,
