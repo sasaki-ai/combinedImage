@@ -5,6 +5,7 @@ use image::{
     ImageFormat,
 };
 
+/// 自定义的异常枚举
 #[derive(Debug)]
 pub enum ImageDataErrors {
     DifferentImageFormats,
@@ -24,7 +25,7 @@ pub struct FloatingImage {
 }
 
 impl FloatingImage {
-    //创建结构体并赋值宽高和路径,图片的大小
+    /// 创建结构体并赋值宽高和路径,图片的大小
     pub fn new(width: u32, height: u32, name: String) -> Self {
         let buffer_capacity = height * width * 4;
         //try_into转换类型
